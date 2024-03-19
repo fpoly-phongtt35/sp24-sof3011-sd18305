@@ -1,4 +1,4 @@
-package com.example.sof3011_sd18205;
+package com.example.session.w1;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
