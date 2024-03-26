@@ -1,5 +1,6 @@
 package com.example.session.w3;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
@@ -15,6 +16,9 @@ public class NguoiYeu {
     private Integer canNang;
     private Float chieuCao;
 
+    private Boolean gioiTinh = Boolean.TRUE; // True - Nu, False - Nam
+    private TinhThanh queQuan = TinhThanh.Ha_Noi;
+
     public NguoiYeu() {}
 
     public NguoiYeu(String hoTen, Integer canNang, Float chieuCao) {
@@ -23,7 +27,25 @@ public class NguoiYeu {
         this.chieuCao = chieuCao;
     }
 
-    public String getLove() {return "Ahehe";}
+    public Boolean getGioiTinh() {
+        return gioiTinh;
+    }
+
+    public void setGioiTinh(Boolean gioiTinh) {
+        this.gioiTinh = gioiTinh;
+    }
+
+    public TinhThanh getQueQuan() {
+        return queQuan;
+    }
+
+    public void setQueQuan(TinhThanh queQuan) {
+        this.queQuan = queQuan;
+    }
+
+    public String getSinhNhatHTML() {
+        return new SimpleDateFormat("yyyy-MM-dd").format(this.sinhNhat);
+    }
 
     public String getMa() {
         return ma;

@@ -13,6 +13,8 @@
 </head>
 <body>
     <h1>Danh sách Người yêu</h1>
+    <a href="khai-bao-nguoi-yeu">Khai báo người yêu</a>
+
     <form action="nguoi-yeu">
         <input type="text" name="keyword" value="${param.keyword}"/>
         <input type="submit" value="Tìm kiếm"/>
@@ -27,12 +29,13 @@
         </tr>
         <c:forEach items="${dsNguoiYeu}" var="nguoiYeu">
             <tr>
-                <td> ${nguoiYeu.ma} </td>
+                <td>
+                    <a href="khai-bao-nguoi-yeu?id=${nguoiYeu.ma}"> ${nguoiYeu.ma} </a>
+                </td>
                 <td> ${nguoiYeu.hoTen} </td>
                 <td> ${nguoiYeu.sinhNhat} </td>
                 <td> ${nguoiYeu.chieuCao} </td>
                 <td> ${nguoiYeu.canNang} </td>
-                <td> ${nguoiYeu.love} </td>
             </tr>
         </c:forEach>
     </table>

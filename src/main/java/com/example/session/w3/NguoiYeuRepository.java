@@ -34,4 +34,15 @@ public class NguoiYeuRepository {
                 ).collect(Collectors.toList());
     }
 
+    public void addNguoiYeu(NguoiYeu nguoiYeu) {
+        DS_NGUOI_YEU.add(nguoiYeu);
+    }
+
+    public NguoiYeu getNguoiYeu(String id) {
+        return DS_NGUOI_YEU.stream()
+                .filter(ny -> ny.getMa().equals(id)) // tìm theo mã
+                .findFirst() // lấy kết quả đầu tiên
+                .orElse(null); // nếu không thấy thì trả về null
+    }
+
 }
