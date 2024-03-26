@@ -41,6 +41,7 @@ public class NguoiYeuRepository {
     public NguoiYeu getNguoiYeu(String id) {
         return DS_NGUOI_YEU.stream()
                 .filter(ny -> ny.getMa().equals(id)) // tìm theo mã
+                .filter(ny -> !ny.getDaXoa()) // lấy ra những người chưa bị xóa
                 .findFirst() // lấy kết quả đầu tiên
                 .orElse(null); // nếu không thấy thì trả về null
     }

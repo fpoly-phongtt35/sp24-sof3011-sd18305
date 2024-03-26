@@ -19,12 +19,59 @@ public class NguoiYeu {
     private Boolean gioiTinh = Boolean.TRUE; // True - Nu, False - Nam
     private TinhThanh queQuan = TinhThanh.Ha_Noi;
 
+    private Date ngayTao;
+    private String nguoiTao;
+    private Date ngaySua;
+    private String nguoiSua;
+
+    private Boolean daXoa = Boolean.FALSE;
+
     public NguoiYeu() {}
 
     public NguoiYeu(String hoTen, Integer canNang, Float chieuCao) {
         this.hoTen = hoTen;
         this.canNang = canNang;
         this.chieuCao = chieuCao;
+    }
+
+    public Boolean getDaXoa() {
+        return daXoa;
+    }
+
+    public void setDaXoa(Boolean daXoa) {
+        this.daXoa = daXoa;
+    }
+
+    public Date getNgayTao() {
+        return ngayTao;
+    }
+
+    public void setNgayTao(Date ngayTao) {
+        this.ngayTao = ngayTao;
+    }
+
+    public String getNguoiTao() {
+        return nguoiTao;
+    }
+
+    public void setNguoiTao(String nguoiTao) {
+        this.nguoiTao = nguoiTao;
+    }
+
+    public Date getNgaySua() {
+        return ngaySua;
+    }
+
+    public void setNgaySua(Date ngaySua) {
+        this.ngaySua = ngaySua;
+    }
+
+    public String getNguoiSua() {
+        return nguoiSua;
+    }
+
+    public void setNguoiSua(String nguoiSua) {
+        this.nguoiSua = nguoiSua;
     }
 
     public Boolean getGioiTinh() {

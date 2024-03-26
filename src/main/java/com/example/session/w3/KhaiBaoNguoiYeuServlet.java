@@ -60,6 +60,10 @@ public class KhaiBaoNguoiYeuServlet extends HttpServlet {
         String queQuanStr = req.getParameter("queQuan");
         TinhThanh queQuan = TinhThanh.valueOf(queQuanStr); nguoiYeu.setQueQuan(queQuan);
 
+        // Tự động thêm thông tin ngày tạo
+        nguoiYeu.setNgayTao(new Date());
+        nguoiYeu.setNguoiTao("PhongTT35");
+
         // Thêm người yêu mới vào CSDL
         repository.addNguoiYeu(nguoiYeu);
 
